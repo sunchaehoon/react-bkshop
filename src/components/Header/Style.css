@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    color: white;
+}
+
+.link:hover {
+    color: white;
+}
+
+label {
+    margin-right: 10px;
+}
+
+/* @media screen and (max-width:1200px) {
+    .lgn-signup {
+        position: relative;
+        right: 400px;
+    }
+} */
