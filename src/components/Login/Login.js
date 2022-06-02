@@ -105,13 +105,23 @@ function Login() {
                                 <S.Lglabel>
                                     <S.Loginspan>아이디</S.Loginspan>
                                 </S.Lglabel>
-                                <S.Logininput id='lgnid' type='text' name='myid' placeholder='아이디 입력' onChange={(e) => {setUserId(e.target.value)}} />
+                                <S.Logininput
+                                    id='lgnid'
+                                    type='text'
+                                    name='myid'
+                                    placeholder='아이디 입력'
+                                    onChange={(e) => {setUserId(e.target.value)}} />
                             </S.Lgndv1>
                             <S.Lgndv2>
                                 <S.Lglabel>
                                 <S.Bbspan>비밀번호</S.Bbspan>
                                 </S.Lglabel>
-                                <S.Bbinput id='lgnpw' type='password' name='mypw' placeholder='비번 입력' onChange={(e) => {setUserPw(e.target.value)}} />
+                                <S.Bbinput
+                                    id='lgnpw'
+                                    type='password'
+                                    name='mypw'
+                                    placeholder='비번 입력'
+                                    onChange={(e) => {setUserPw(e.target.value)}} />
                             </S.Lgndv2>
                         </S.LoginboxIB>
                         <S.Lgnbtn type='submit' value='로그인' onClick={lgnCheck}></S.Lgnbtn>
