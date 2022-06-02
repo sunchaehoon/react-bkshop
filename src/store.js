@@ -6,6 +6,11 @@ let stock = createSlice({
     initialState: 0
 });
 
+let review = createSlice({
+    name: 'review',
+    initialState: 0
+});
+
 
 export default configureStore({
     reducer: {
