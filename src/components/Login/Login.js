@@ -5,6 +5,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Header from '../Header/Header.js';
 
 function Login() {
     const [userId, setUserId] = useState("");
@@ -63,7 +64,7 @@ function Login() {
         .then((user) => {
             user.data.map(function(a, i) {
                 if(user.data[i].Id == userId && user.data[i].Pw == userPw) {
-                    loginAlert.style.visibility = "hidden";
+                    loginAlert.style.display = "none";
                     alert(user.data[i].Name + "님 로그인");
                     localStorage.setItem('login', 'true');
                     localStorage.setItem('username', user.data[i].Name);
@@ -84,17 +85,7 @@ function Login() {
     return (
         <>
             <S.Container>
-                <S.Navbar>
-                    <S.Logo>
-                        <Link to='/' className='link'><img src='img/constantinelogo.png' height="45" /></Link>
-                    </S.Logo>
-                    <S.NvMenu>
-                        <S.Frame><Link to='/frame' className='link'>Frame</Link></S.Frame>
-                        <S.Parts><Link to='/parts' className='link'>Parts</Link></S.Parts>
-                        <S.Finished><Link to='/finished' className='link'>Finished</Link></S.Finished>
-                        <S.Others><Link to='/others' className='link'>Clothes&Accessori</Link></S.Others>
-                    </S.NvMenu>
-                </S.Navbar>
+                <Header />
 
             
                 <S.Lgscreen>
