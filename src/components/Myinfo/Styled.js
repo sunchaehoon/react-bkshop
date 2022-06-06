@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import Userprf from "https://github.com/sunchaehoon/react-bkshop/blob/master/public/img/user-1.png";
 
 export const Container = styled.div`
-    height: 700px;
+    height: 744.5px;
     width: 100%;
 `;
 
@@ -82,17 +81,34 @@ export const Signup = styled(Login)`
 export const MyContent = styled.div`
     position: relative;
     width: 60%;
+    max-width: 850px;
+    left: 0px;
     height: 450px;
     top: 140px;
+    background-color: blue;
 `;   
 
 export const Prof = styled.div`
     display: flex;
-    padding: 15px;
+    padding: 20px 40px;
 `;
 
-export const ProfImg = styled.div`
-    background-image: url(${Userprf});
-    width: 80px;
+export const ProfName = styled.div`
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    font-size: 30px;
+    color: sky;
 `;
+
+export const ProfDetail = styled.div`
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+`;
+
+
+
+
 

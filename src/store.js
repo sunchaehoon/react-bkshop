@@ -19,14 +19,25 @@ let review = createSlice({
     }
 });
 
-export const { addReview } = review.actions;
+let username = createSlice({
+    name: 'username',
+    initialState: "",
+    reducers: {
+        setUsername(state) {
+            return state;
+        }
+    }
+})
+
+export const { setUsername } = username.actions;
 // 만든 함수는 export 해야함
 
 
 export default configureStore({
     reducer: {
         stock: stock.reducer,
-        review: review.reducer
+        review: review.reducer,
+        username: username.reducer
     }
 });
 

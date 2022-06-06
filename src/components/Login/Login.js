@@ -6,14 +6,20 @@ import axios from 'axios';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Header from '../Header/Header.js';
+import { useDispatch, useSelector } from "react-redux";
+import { setUsername } from '../../store.js';
 
 function Login() {
     const [userId, setUserId] = useState("");
     const [userPw, setUserPw] = useState("");
     const [onLogin, setonLogin]= useState(false);
     const navigate = useNavigate();
+    const [username1, setUsername1] = useState("");
 
     let loginAlert = document.querySelector("#lgnalert");
+
+    let store = useSelector((state) => {return state});   // Redux store.js에 있던 모든 state가 남음
+    let dispatch = useDispatch();
 
     localStorage.setItem('login', 'false');
 
@@ -58,7 +64,7 @@ function Login() {
             PwError();
             return false;
         }
-        
+
 
         axios.get('http://localhost:3001/users')
         .then((user) => {
@@ -77,9 +83,12 @@ function Login() {
         .catch(() => {
             console.log("something wrong");
         })
+
         
         return true;
     }
+    
+    
 
 
     return (

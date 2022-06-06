@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.userPrf {
+    padding: 15px;
+}
+
+.userPrf-prf {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
